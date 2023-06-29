@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Samediscare Printer App</string>
+    <string name="printer_note"><b>Note: </b> Printer Not Connected. Please check the bluetooth connection and try again.</string>
+    <string name="paper_note"><b>Note: </b> Please select the appropriate paper size for the printer.</string>
+    <string name="select_paper">Paper size</string>
+</resources>

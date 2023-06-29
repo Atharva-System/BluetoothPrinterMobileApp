@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: __wrapped_aars__::BrotherPrintLibrary:unspecified@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/BrotherPrintLibrary/build/.transforms/6c1a3b188af59e6a79214c6cae7e8d3a/transformed/BrotherPrintLibrary/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/BrotherPrintLibrary/build/.transforms/6c1a3b188af59e6a79214c6cae7e8d3a/transformed/BrotherPrintLibrary/res" />
+      <root url="file://$PROJECT_DIR$/BrotherPrintLibrary/build/.transforms/6c1a3b188af59e6a79214c6cae7e8d3a/transformed/BrotherPrintLibrary/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

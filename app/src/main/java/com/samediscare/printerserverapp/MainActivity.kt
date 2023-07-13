@@ -52,8 +52,8 @@ class MainActivity : AppCompatActivity() {
         val mainIntent = intent
         if (mainIntent?.data != null) {
             val data: Uri = mainIntent.data!!
-            printUrl= data.getQueryParameter("url").toString()
-            printInventoryId =data.getQueryParameter("inventoryid").toString()
+            printUrl= data.getQueryParameter(getString(R.string.select_paper)).toString()
+            printInventoryId =data.getQueryParameter(getString(R.string.select_id)).toString()
             if (printUrl.isNotEmpty()){
                 binding.b1.isEnabled = true
                 bitmap = generateQRCode(printUrl)

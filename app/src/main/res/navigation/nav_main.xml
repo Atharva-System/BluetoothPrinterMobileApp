@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/printFragment">
+
+    <fragment
+        android:id="@+id/printFragment"
+        android:name="com.samediscare.printerserverapp.fragment.PrintFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_print" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.samediscare.printerserverapp.fragment.SettingFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_setting" />
+
+</navigation>

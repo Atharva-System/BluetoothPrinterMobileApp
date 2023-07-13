@@ -7,9 +7,14 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="light_white">#FBFBFB</color>
     <color name="darkGray">#EDEFEF</color>
-    <color name="colorPrimary">#3A96F3</color>
+<!--    <color name="colorPrimary">#3A96F3</color>-->
+    <color name="colorPrimary">#0269B4</color>
     <color name="danger">#F84131</color>
     <color name="dark_gray">#8C8A8A</color>
+    <color name="button_bg">#D9E9F5</color>
+    <color name="button_color">#0269B4</color>
+    #0269B4
 
 </resources>

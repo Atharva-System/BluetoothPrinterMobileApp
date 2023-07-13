@@ -117,6 +117,7 @@ public class Brother {
                 PrinterStatus result = null;
                 boolean startCommunicationSuccess = printer.startCommunication();
                 Log.e(TAG, "startCommunicationSuccess: " + startCommunicationSuccess);
+
                 if (startCommunicationSuccess) {
                     if (isPrintPdf) {
                         result = printer.printPdfFile(filePath, 1);

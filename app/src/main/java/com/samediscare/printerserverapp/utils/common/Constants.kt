@@ -244,6 +244,7 @@ object Constants {
             const val STATUS1 = "STATUS1"//Please connect bluetooth from setting menu
             const val STATUS2 = "STATUS2"//One of the following may have occurred:\n -Bluetooth is off\n -Printer is not paired\n -Bluetooth is out of range
             const val STATUS3 = "STATUS3"
+            const val SAVEPAIRDEVICE = "save_pair_device"
         }
     }
 

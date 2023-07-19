@@ -37,4 +37,6 @@
     <string name="success">Print successfully</string>
     <string name="data_saved">Settings saved successfully.</string>
     <string name="selected_printer">Selected printer</string>
+    <string name="empty_qr">QR not found.</string>
+    <string name="pair_device">Please pair bluetooth device or start Bluetooth</string>
 </resources>

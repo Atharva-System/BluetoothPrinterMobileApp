@@ -4,7 +4,6 @@ import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothManager
 import android.content.Context
 import android.graphics.Bitmap
-import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -21,8 +20,6 @@ import com.bong.brothersetup.utils.common.UserPreferences
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.EncodeHintType
 import com.google.zxing.MultiFormatWriter
-import com.google.zxing.WriterException
-import com.google.zxing.common.BitMatrix
 import com.samediscare.printerserverapp.Brother
 import com.samediscare.printerserverapp.MyViewModel
 import com.samediscare.printerserverapp.R
@@ -42,6 +39,7 @@ class PrintFragment : Fragment() {
     var bluetoothManager: BluetoothManager? = null
     private var mViewModel: MyViewModel? = null
     private lateinit var btModel: BtModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -66,7 +64,7 @@ class PrintFragment : Fragment() {
                         binding.statusTxt.text=getString(R.string.printing)
                     }
                 else{
-                    Toast.makeText(context,"Please select QR .",Toast.LENGTH_LONG).show()
+                    Toast.makeText(context,getString(R.string.empty_qr),Toast.LENGTH_LONG).show()
                 }
 
 
@@ -118,15 +116,20 @@ class PrintFragment : Fragment() {
                     checkBlutoothStatus()
                     showToast(getString(R.string.success))
                 }
+                    Constants.PrintStatus.SAVEPAIRDEVICE -> {
+                        showToast(getString(R.string.pair_device))
+                    }
                 else ->{
-
+                    if(it.isNotEmpty()){
+                        showToast(getString(R.string.unknown_error))
+                    }
                     checkBlutoothStatus()
                 }
 
             }
 
         } catch (e: Exception) {
-                btModel.qrPrintStatus.postValue("")
+                //btModel.qrPrintStatus.postValue("")
                }
     }
     }
@@ -219,9 +222,16 @@ class PrintFragment : Fragment() {
 //        text.setTextColor(Color.WHITE)
 //        toast.setGravity(Gravity.FILL_HORIZONTAL or Gravity.TOP, 0, 0)
 //        toast.show()
-        Toast.makeText(context,message,Toast.LENGTH_LONG).show()
-        btModel.qrPrintStatus.postValue("")
+        val isVisible = isFragmentVisible()
+        if(isVisible){
+            Toast.makeText(context,message,Toast.LENGTH_LONG).show()
+            btModel.qrPrintStatus.postValue("")
+        }
 
 
+
+    }
+    private fun isFragmentVisible(): Boolean {
+        return isVisible && !isHidden
     }
 }

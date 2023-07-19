@@ -13,7 +13,7 @@
         android:padding="@dimen/dim_20">
 
         <Switch
-            android:id="@+id/switch_button"
+            android:id="@+id/switch_button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/dim_20"
@@ -23,7 +23,22 @@
             android:textColor="@color/black"
             android:textSize="18dp"
             android:textStyle="bold"
+            android:visibility="gone"
             tools:ignore="UseSwitchCompatOrMaterialXml" />
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_button"
+            android:layout_marginBottom="@dimen/dim_20"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/bluetooth"
+            app:switchPadding="@dimen/dim_20"
+            android:layoutDirection="rtl"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:track="@drawable/custom_track"
+            android:thumb="@drawable/custom_thumb"
+            />
         <Button
             android:id="@+id/btnGet"
             android:layout_width="wrap_content"
@@ -55,13 +70,15 @@
                 android:background="@drawable/spinner_background"
                 android:spinnerMode="dropdown"
                 />
+
             <ImageView
                 android:layout_width="@dimen/dim_50"
                 android:layout_height="@dimen/dim_50"
+                android:layout_alignBottom="@+id/spinner"
                 android:layout_alignParentRight="true"
                 android:src="@drawable/ic_baseline_arrow_drop_down_24"
-                android:layout_alignBottom="@+id/spinner"
                 app:tint="@color/colorPrimary" />
+
             <TextView
                 android:id="@+id/label_printer_note"
                 android:layout_width="match_parent"

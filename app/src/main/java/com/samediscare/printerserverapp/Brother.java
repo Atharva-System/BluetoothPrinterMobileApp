@@ -34,9 +34,6 @@ public class Brother {
                          int labelFormat,
                          boolean isPrintPdf,
                          MutableLiveData<String> printStatus) {
-        Log.v("app", "Prepping to send file to printer");
-
-        Log.v("app", "Instantiating Brother Printer");
 
         this.labelFormat = labelFormat;
         // Setup the printer
@@ -138,10 +135,7 @@ public class Brother {
                     //  RxBus.getInstance().publish(new PrintDoneEvent(result));
                     printer.endCommunication();
                 } else {
-                    //Toast.makeText(context,"Please connect with bluetooth device.",Toast.LENGTH_LONG).show();
-                    // showAlert(context, msg, description, "");
                     printStatus.postValue(Constants.PrintStatus.DEVICE_BLUETOOTH_OFF);
-                    // printStatus.postValue("startCommunicationSuccess: Please connect with bluetooth device.");
                     Log.e(TAG, "startCommunicationSuccess: Please connect with bluetooth device.");
                 }
             }).start();
